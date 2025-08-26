@@ -1,0 +1,216 @@
+<hr />
+<div class="row job">
+  <div class="col-md-12 details">
+    <div class="pull-right">
+      <span>September 2022 - Present</span>
+    </div>
+    <b>Oracle Cloud Infrastructure - Container Instance (Container VM) Data Plane</b>
+    <span>- Seattle, Washington</span>
+    <div>
+      <i>Principal Software Development Engineer</i>
+    </div>
+  </div>
+  <div class="col-md-12 description">
+    <p>
+      As a member of the Container Instances team, helped build the service and take it to GA. Designed and built the hypervisor and customer instance availability
+      monitoring systems. Designed and built the hypervisor imaging system. Designed and built the hypervisor image build, test and release pipelines.
+      Helped build the remote command execution feature for executing commands on customer containers.
+    </p>
+  </div>
+  <div class="col-md-12 accomplishments">
+    <ul class="list-bullet">
+      <li>
+        <b>Remote Execution</b>
+        <ul>
+          <li>
+            Designed and built a custom Socat like application in go used as a connection relay for remote command execution. The relay
+            was used to plum the front end connection from the customer facing remote execution endpoints into the containers running 
+            in the customers container instances on the hypervisor.
+          </li>
+          <li>
+            Helped setup the data plane API that handled incoming remote execution requests from customers, and routed them to the customer's
+            containers.
+          </li>
+          <li>
+            Built the implementation on the container instance agent for sending the remote execution requests to containerd, and launching
+            the connection relays for plumbing the connection from the hypervisor to the container instance and from the container instance
+            to the container.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Container Instance Service</b>
+        <ul>
+          <li>
+            Helped launch the Container Instances (Container Virtual Machine) service for Oracle Cloud Infrastructure.
+            Container instances are used as the back end for serverless kubernetes, and also as a publicly available customer facing service.
+          </li>
+          <li>
+            Designed and built the Hypervisor Imaging and Testing pipeline. A completely automated process of taking a 
+            vanilla Linux OS image, configure it, install the dataplane services, export it to a bootable image, test it using 
+            nested virtualization, create an updater application for updating existing hypervisors, and deploy it to our staging environment.
+          </li>
+          <li>
+            Designed and built a system for monitoring availability of all customer instances.
+          </li>
+          <li>
+            Created the data plane availability monitoring dashboards and customer experience metrics reporting tools.
+          </li>
+          <li>
+            Designed and built the automated pipeline for testing hypervisor images in a Beta testing environment, rolling changes out to our
+            integration testing environment, and carefully releasing to production in stages, with automated validation of each stage.
+          </li>
+          <li>
+            Created the Data Plane canary tests for monitoring production data plane health, as well as release pipeline stage validation. 
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Oracle Cloud Infrastructure Hypervisor Imaging</b>
+        <ul>
+          <li>Designed and built the Hypervisor Imaging system for building and testing hypervisor images for Oracle Cloud Infrastructure.</li>
+          <li>
+            Lead a team of engineers in building a service that takes a Vanilla Linux OS image and a package manifest, and builds a bootable
+            Linux image that can be used to launch a Hypervisor. Hypervisor images are used to host all Virtual Machine images as well as 
+            Container Virtual Machine instances.
+          </li>
+          <li>
+            Designed and built the imaging host fleet monitoring systems.
+          </li>
+          <li>
+            Designed and built the application for updating all existing hypervisors.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<hr />
+<div class="row job">
+  <div class="col-md-12 details">
+    <div class="pull-right">
+      <span>July 2017 - September 2022</span>
+    </div>
+    <b>Oracle Cloud Infrastructure - VMI Data Plane</b>
+    <span>- Seattle, Washington</span>
+    <div>
+      <i>Senior Software Development Engineer</i>
+    </div>
+  </div>
+  <div class="col-md-12 description">
+    <p>
+      As a member of the VMI Dataplane team, manage and grow a fleet of hypervisors from 500 to 80k hosts. This includes designing building and maintaining services
+      that monitor and control the hypervisors, last line of 24/7 support for the customer service teams working with customers, performing complex
+      root cause analysis of issues causing service interruptions, and a constant effort to automate and improve regular operations tasks.
+    </p>
+  </div>
+  <div class="col-md-12 accomplishments">
+    <ul class="list-bullet">
+      <li>
+        <b>OCI Virtual Machine Data Plane Operations Lead</b>
+        <ul>
+          <li>
+            In addition to typical engineering work, lead VM data plane opperations for OCI.
+          </li>
+          <li>
+            Managed day to day operations. Handled customer escalations, ongoing issues, and made sure that any production issues were tracked, 
+            fixes were prioritized, and ensured the delivery of mitigations.
+          </li>
+          <li>
+            Worked with several high profile customers to ensure production issues were identified, tracked, and addressed quickly.
+          </li>
+        </ul>
+      </li>
+      </li>
+      <li>
+        <b>Virtual Machine Diagnostics</b>
+        <ul>
+          <li>
+            Designed built and maintained a tool for providing self service virtual machine diagnostics for internal users.
+          </li>
+          <li>
+            Designed and implemented data plane level telemetry collection processes for providing continuous monitoring information for all Virtual Machines.
+          </li>
+          <li>
+            Designed and implemented a system for propogating additional information from the control plane to the dataplane allow automatd correlation of
+            data plane telemetry data to specific virtual machine instances.
+          </li>
+          <li>
+            Added a front end for the diagnostics tool in the internal devops site to allow for self service VM diagnostics. 
+          </li>
+          <li>
+            Designed the tool to be usable by individual engineers to perform custom diagnostics as well as aid in the development of the diganostics tool.
+          </li>
+          <li>
+            Designed and led the development of a deep diagnostics tool for collecting detailed host and instance diagnostic logs and data. The tool was used
+            to collect the data as a bundle, and automatically send it to the Oracle Linux team to perform in depth analysis. The tool helped reduce the time
+            to engage kernel developers on the Oracle Linux team when debugging complex system level issues.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Hosthealth Service</b>
+        <ul>
+          <li>
+            Designed, built, and maintained the hosthealth monitoring service that
+            monitors and reports the health of all hypervisors.
+          </li>
+          <li>
+            Streamed metrics from hosts instead of requiring hosts to be polled regularly.
+          </li>
+          <li>
+            Used monitoring data to create alarms that helped meet a 15 minute SLA for compliance violations.
+          </li>
+          <li>
+            Setup data visualization aids for quick insite into the health of the hypervisor fleet.
+          </li>
+          <li>
+            During initial rollout, the hosthealth service provided the first alarm for a major compliance issues
+            that had gone unreported for almost 24 hours.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Canary Testing Framework</b>
+        <ul>
+          <li>
+            Designed, built and maintained a test framework for writing canary tests on my own initiative.
+          </li>
+          <li>
+            Significatly reduced the effort required to expand production test coverage.
+          </li>
+          <li>
+            Significatly reduced the computing resources required to run tests.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Microcontainer image</b>
+        <ul>
+          <li>Designed and implemented the build and deployment process for the microcontainer image that runs all VMs.</li>
+          <li>Coordinated the effort to get up to date custom slimmed down version qemu from the Oracle Linux team in California.</li>
+        </ul>
+      </li>
+      <li>
+        <b>In-place kernel updates</b>
+        <ul>
+          <li>Introduced support for in place kernel updates as part of the regular hypervisor release.</li>
+          <li>Used a product called KSplice, owned by Oracle, to apply updates to the host kernel while the system is running.</li>
+          <li>Illimitated the need to reboot hosts effected by issues with the host's kernel.</li>
+        </ul>
+      </li>
+      <li>
+        <b>Other Accomplishments</b>
+        <ul class="list-bullet">
+          <li>Helped support the growth of the service from ~1000 hypervisors to almost 30,000k hypervisors</li>
+          <li>Helped plan and execute the effort to implement full end to end CI/CD for the VMI dataplane hypervisor stack.</li>
+          <li>Acted as release coordinator for a number of hypervisor deployments.</li>
+          <li>Root caused, fixed, tested and deployed fix during a full team emergent fleet wide patching effort that was preventing patching for the last 6% of the fleet.</li>
+          <li>Contributed regularly to various operations tools.</li>
+          <li>Assisted in acquiring workstations and laptops for the VMI dataplane team that were capable of running the hypervisor test stack.</li>
+          <li>11th member of the OCI VM team which has grown to over 100 engineers.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

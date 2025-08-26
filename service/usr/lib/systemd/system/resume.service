@@ -1,0 +1,19 @@
+[Unit]
+Description=Resume service - mark.srvr.farm
+After=local-fs.target network.target docker.service srv.mount
+Wants=local-fs.target
+
+[Service]
+Restart=always
+RestartSec=10
+Type=simple
+TimeoutStopSec=120s
+User=root
+WorkingDirectory=/srv/resume/
+ExecStart=/opt/resume/bin/start.sh
+ExecStop=/opt/resume/bin/stop.sh
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
+
