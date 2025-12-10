@@ -12,9 +12,13 @@
   </div>
   <div class="col-md-12 description">
     <p>
-      As a member of the Container Instances team, helped build the service and take it to GA. Designed and built the hypervisor and customer instance availability
-      monitoring systems. Designed and built the hypervisor imaging system. Designed and built the hypervisor image build, test and release pipelines.
+      As a member of the Container Instances team, helped build the service and take it to GA. 
+      Designed and built the hypervisor and customer instance availability
+      monitoring systems. Designed and built the hypervisor imaging system. 
+      Designed and built the hypervisor image build, test and release pipelines.
       Helped build the remote command execution feature for executing commands on customer containers.
+      Helped with performance testing and analysis, performed complex root cause analysis of issues in user and kernel space.
+      Helped improve observability by ensuring telemetry data collected from hypervisors covered all relevent performance metrics.
     </p>
   </div>
   <div class="col-md-12 accomplishments">
@@ -23,8 +27,8 @@
         <b>Remote Execution</b>
         <ul>
           <li>
-            Designed and built a custom Socat like application in go used as a connection relay for remote command execution. The relay
-            was used to plum the front end connection from the customer facing remote execution endpoints into the containers running 
+            Designed and built a custom Socat like connection relay written in go. Used as a connection relay for remote command execution. 
+            The relay was used to plum the front end connection from the customer facing remote execution endpoints into the containers running 
             in the customers container instances on the hypervisor.
           </li>
           <li>
@@ -79,6 +83,11 @@
           </li>
           <li>
             Designed and built the application for updating all existing hypervisors.
+          </li>
+          <li>
+            Designed and built a fully automated testing pipeline for hypervisor images. The pipeline builds and tests the image in a virtualized environment, using paravirtualization and a mocked overlay,
+            and then moves to testing on bare metal, and finishes with staging a deployment of the release candidate image to our staging environment. Tests include baseline performance tests, feature tests, and 
+            some chaos testing.
           </li>
         </ul>
       </li>
